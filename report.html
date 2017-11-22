@@ -13532,6 +13532,16 @@ The system has identified 11 images with a person the 1st 100 DOG images
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Answer:</strong></p>
+<p>It is not a reasonable expectation as there are many other methods that can cope with those situations. One of this approaches is described in "A Convolutional Neural Network Cascade for Face Detection" by Haoxiang Li, Zhe Lin, Xiaohui Shen, Jonathan Brandt, and Gang Hua. In this paper they proposed a combination of CNN for face detection with great results even in images where faces are not perfectly align.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Face-Detection-with-Convolutional-Neural-Network-Classifier">Face Detection with Convolutional Neural Network Classifier<a class="anchor-link" href="#Face-Detection-with-Convolutional-Neural-Network-Classifier">&#182;</a></h3>
 </div>
 </div>
@@ -13962,7 +13972,27 @@ Percentage of dogs: 100.000000
 <p>We have imported some Python modules to get you started, but feel free to import as many modules as you need.  If you end up getting stuck, here's a hint that specifies a model that trains relatively fast on CPU and attains &gt;1% test accuracy in 5 epochs:</p>
 <p><img src="images/sample_cnn.png" alt="Sample CNN"></p>
 <p><strong>Question 4:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  If you chose to use the hinted architecture above, describe why you think that CNN architecture should work well for the image classification task.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
+<p>I chose to use the CNN above because this is my first attemp towards the problem and this CNN follows the typical CNN architecture of (conv layer + pooling) topped with fully connected layer.</p>
+<p>Steps:</p>
+<ol>
+<li><p>Define the network topology and other parameters. The network is defined in a sequential manner.</p>
+</li>
+<li><p>Define the training parameters for the network.</p>
+</li>
+<li><p>Train model specifying training set, epochs, and batch size. Furthermore, a checkpoint function is added to save the best model so far.</p>
+</li>
+<li><p>Test the model on the testing set measuring accuracy. We add the posibility for the user to load the weights obtained during training for those occasions where training and testing does not happen in the same session.</p>
+</li>
+</ol>
 
 </div>
 </div>
